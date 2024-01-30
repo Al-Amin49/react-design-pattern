@@ -8,7 +8,7 @@ const ThemeContext=createContext<TThemeContext | undefined>(undefined);
 type TThemeProviderProps={
 children:ReactNode;
 }
-const ThemeProvider = ({children}:TThemeProviderProps) => {
+export const ThemeProvider = ({children}:TThemeProviderProps) => {
     const [dark, setDark]= useState(false);
     const values={
         dark,
@@ -20,7 +20,7 @@ const ThemeProvider = ({children}:TThemeProviderProps) => {
         </ThemeContext.Provider>
     );
 };
-const useTheme=():TThemeContext=>{
+export const useTheme=():TThemeContext=>{
     const context=useContext(ThemeContext);
     if (!context) {
         throw new Error("useTheme must be used within a ThemeProvider");
@@ -28,4 +28,3 @@ const useTheme=():TThemeContext=>{
       return context;
 }
 
-export  {ThemeProvider, useTheme};
