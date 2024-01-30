@@ -1,5 +1,6 @@
 import ForwardRefPattern from "./component/ForwardRefPattern"
 import { MenuItem, MenuList } from "./component/Menu"
+import Select from "./component/Select"
 import UsersContainer from "./component/UsersContainer"
 import { useTheme } from "./context/ThemeProvider"
 
@@ -18,6 +19,12 @@ console.log(dark)
       <MenuItem></MenuItem>
     </MenuList>
     <UsersContainer/>
+    <Select>
+      <Select.SelectOption value="option 1">Option 1</Select.SelectOption>
+      <Select.SelectOption value="option 2">Option 2</Select.SelectOption>
+      <Select.SelectOption value="option 3">Option 3</Select.SelectOption>
+      <Select.SelectOption value="option 4">Option 4</Select.SelectOption>
+    </Select>
     </div>
     </>
   )
